@@ -41,8 +41,7 @@ const Post = ({ post, setCurrentId }) => {
         
       
       
-      {/* <Typography className={classes.title}  variant="h5" component="h2">{post.title}</Typography>
-      <Typography className={classes.title}   variant="body3" component="h3"> Price: £ {post.price}</Typography> */}
+      
     
       <CardActions>
         <Button size="small">BUY NOW</Button>

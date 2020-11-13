@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Container, AppBar, Typography, Grow, Grid, formatMs } from '@material-ui/core';
 import { useDispatch } from 'react-redux';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-
-import Posts from './components/Posts/Posts';
+import Posts from './components/Posts/PostList';
 import Form from './components/Form/Form';
 import { getPosts } from './actions/posts';
 import useStyles from './styles';
 import memories from './images/memories.png';
-import HomeScreen from './HomeScreen';
+import HomeScreen from './screens/HomeScreen';
+import UploadScreen from './screens/UploadScreen';
 
 const App = () => {
   const [currentId, setCurrentId] = useState(0);
@@ -22,7 +23,11 @@ const App = () => {
   return (
     
     <Container>
-      <HomeScreen/>
+       <BrowserRouter>
+     
+     <Route path='/' component={HomeScreen} exact></Route>
+           <Route path='/upload' component={UploadScreen} exact></Route>
+           </BrowserRouter>
 
 
     </Container>
