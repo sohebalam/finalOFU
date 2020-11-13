@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardActions, CardContent, CardMedia, Button, Typography, CardHeader, Avatar, IconButton } from '@material-ui/core/';
+import { Card, CardActions, CardContent, CardMedia, Button, Typography, CardHeader, Avatar, IconButton, Grid, ButtonBase, Paper, Box } from '@material-ui/core/';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import DeleteIcon from '@material-ui/icons/Delete';
 import {MoreHorizIcon, MoreVertIcon }from '@material-ui/icons/MoreHoriz';
@@ -17,8 +17,32 @@ const Post = ({ post, setCurrentId }) => {
     <Card >
          
       <CardMedia  style={{ height: "50px" }} className={classes.media} image={post.selectedFile || 'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'} title={post.title} />
-      <Typography className={classes.title} gutterBottom  variant="h5" component="h2">{post.title}</Typography>
-      <Typography className={classes.title} gutterBottom  variant="body3" component="h3"> Price: £ {post.price}</Typography>
+     
+    
+     
+        <Grid container spacing={1}>
+         
+         
+          
+            <Box m={0.75} p={0.75}>
+                <Typography className={classes.title} variant="h5">
+                {post.title}
+                </Typography>
+               </Box>
+              
+              
+            
+          
+            <Box m={0.75} p={0.75}>
+              <Typography  className={classes.title} variant="subtitle1">Price: £ {post.price}</Typography> 
+              </Box>
+            
+          </Grid>
+        
+      
+      
+      {/* <Typography className={classes.title}  variant="h5" component="h2">{post.title}</Typography>
+      <Typography className={classes.title}   variant="body3" component="h3"> Price: £ {post.price}</Typography> */}
     
       <CardActions>
         <Button size="small">BUY NOW</Button>
