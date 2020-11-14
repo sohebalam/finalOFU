@@ -13,7 +13,7 @@ const Footer = () => {
         <div align='center'> 
             
                      
-        <div class="hr"/>
+        <div className="hr"/>
         <p> &#169; OpenFreeUni </p>
         
         

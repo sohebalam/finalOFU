@@ -12,5 +12,18 @@ const theme = createMuiTheme({
       main: yellow[900] ,
     },
   },
+
+  typography: {
+    fontFamily: [
+      
+     
+     
+      
+      'Arial',
+      
+    ].join(','),
+    
+  },
+
 });
 export default theme;

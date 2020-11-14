@@ -14,7 +14,7 @@ const useStyles = makeStyles(()=>({
 const Header = () => {
     
     return (
-        <div>
+        <>
         <AppBar position="static" color="primary" >
             
 
@@ -27,13 +27,13 @@ const Header = () => {
              <IconButton  aria-label='menu'> {<img src="../images/v3.png" height="40px" alt="logo"/>}</IconButton> 
              
              <Typography variant='h6' style={{flex: 1}}></Typography>
-             <Button colour='inherit' edge='start' aria-label='menu'> Login</Button>
-             <Button colour='inherit' edge='start' aria-label='menu'> Register</Button>
+             <Button style={{color: 'white'}} edge='start' aria-label='menu'> Login</Button>
+             <Button style={{color: 'white'}} edge='start' aria-label='menu'> Register</Button>
         </Toolbar>
         
         </AppBar>
         <hr />
-       </div>
+       </>
       
         
      
