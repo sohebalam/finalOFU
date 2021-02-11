@@ -1,18 +1,24 @@
-import express from 'express';
+import express from "express"
+import { protect } from "../middleware/protect.js"
 
-import { getPosts, getPost, createPost, updatePost, likePost, deletePost } from '../controllers/posts.js';
+import {
+  getPosts,
+  getPost,
+  createPost,
+  updatePost,
+  likePost,
+  deletePost,
+  getLogin,
+} from "../controllers/posts.js"
 
-const router = express.Router();
+const router = express.Router()
 
-router.get('/', getPosts);
-router.get('/login', (req, res)=> {
-    res.send('Login')
-})
-router.post('/', createPost);
-router.get('/:id', getPost);
-router.patch('/:id', updatePost);
-router.delete('/:id', deletePost);
-router.patch('/:id/likePost', likePost);
+router.get("/", getPosts)
+router.get("/login", getLogin)
+router.post("/", createPost)
+router.get("/:id", getPost)
+router.patch("/:id", protect, updatePost)
+router.delete("/:id", protect, deletePost)
+router.patch("/:id/likePost", protect, likePost)
 
-
-export default router;
+export default router

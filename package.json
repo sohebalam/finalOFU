@@ -8,11 +8,13 @@
     "morgan": "^1.10.0",
     "passport": "^0.4.1",
     "passport-google-oauth20": "^2.0.0",
+    "react-google-button": "^0.7.2",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0"
   },
   "scripts": {
-    "dev": "cross-env NODE_ENV=production node index.js",
-    "start": "cross-env NODE_ENV=development nodemon index.js"
+    "forever": "cd backend && npm start",
+    "client": "cd frontend && npm start",
+    "dev": "concurrently \"npm run forever\" \"npm run client\""
   }
 }
